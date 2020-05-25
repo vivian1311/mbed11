@@ -51,9 +51,9 @@ int main(){
 
   // SLAVE_MY should be different between Slave A and Slave B
 
-  xbee.printf("ATMY <SLAVE_MY>\r\n");
+  xbee.printf("ATMY 0x200\r\n");
 
-  reply_messange(xbee_reply, "setting MY : <SLAVE_MY>");
+  reply_messange(xbee_reply, "setting MY : 0x200");
 
 
   xbee.printf("ATDL 0x0\r\n");
@@ -61,9 +61,9 @@ int main(){
   reply_messange(xbee_reply, "setting DL : 0x0");
 
 
-  xbee.printf("ATID <PAN_ID>\r\n");
+  xbee.printf("ATID 0x1\r\n");
 
-  reply_messange(xbee_reply, "setting PAN ID : <PAN_ID>");
+  reply_messange(xbee_reply, "setting PAN ID : 0x1");
 
 
   xbee.printf("ATWR\r\n");
